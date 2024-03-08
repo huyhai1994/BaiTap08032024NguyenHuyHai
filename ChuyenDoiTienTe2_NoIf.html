@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="Amount"></td>
+        <td>
+            <select id="selectCurrencyColume1">
+                <option value="1"> VND</option>
+                <option value="23000"> USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="selectCurrencyColume2">
+                <option value="1"> VND</option>
+                <option value="0.00004347826">USD</option>
+            </select>
+        </td>
+        <td>
+            <button type="button" onclick="convertCurrency()"> Ấn để tính</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Số tiền hoán đổi là : </td>
+        <td id="Result" style="border-color: darkblue"></td>
+    </tr>
+</table>
+<script>
+
+    function convertCurrency() {
+        let Colume1CurrencyType = document.getElementById("selectCurrencyColume1").value;
+        let Colume2CurrencyType = document.getElementById("selectCurrencyColume2").value;
+        let InputAmount = document.getElementById("Amount").value;
+        let ConvertedAmountValue = Colume1CurrencyType * Colume2CurrencyType * InputAmount;
+        document.getElementById("Result").innerHTML = String( ConvertedAmountValue );
+    }
+</script>
+</body>
+</html>

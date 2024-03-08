@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id = "aValue"> Nhập số a
+<input type = "text" id = "bValue"> Nhập số b
+<button type = "button" onclick="compareValueOf_a_and_b()"> Ấn vào đề so sánh 2 số </button>
+</body>
+<script>
+    function compareValueOf_a_and_b (){
+        let a =  +document.getElementById("aValue").value;
+        let b =  +document.getElementById("bValue").value;
+        let a_bigger_b = (a>b);
+        let a_diff_b = (a !== b);
+        let a_equal_b = (a===b);
+        document.write('a  = ' + a);
+        document.write('b  = ' + b);
+        document.write('<hr>');
+        document.write('a lớn hơn : ' + a_bigger_b);
+        document.write("<br>")
+        document.write('a khác b : ' + a_diff_b)
+        document.write("<br>")
+        document.write('a bằng b : ' + a_equal_b);
+    }
+</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type = "text" id = "FirstNumber">
+    <input type = "text" id = "SecondNumber">
+    <br><br><br>
+    <button type = "button" onclick="calculate_and_displayResultAddition()"> Addition(+)</button>
+    <button type = "button" onclick="calculate_and_displayResultSubtraction()"> Subtraction(-)</button>
+    <button type = "button" onclick= "calculate_and_displayMultiplication()"> Multiplication(x)</button>
+    <button type = "button" onclick= "calculate_and_displayResultDivision()"> Division(/)</button>
+    <br><br><br>
+    <h3 id = "changeMessage"> </h3>
+    <script>
+        function calculate_and_displayResultAddition()
+        {
+            let FirstNumber = +document.getElementById("FirstNumber").value;
+            let SecondNumber = +document.getElementById("SecondNumber").value;
+            let Addition = FirstNumber+SecondNumber;
+            document.getElementById("changeMessage").innerHTML = "Result Addition :" +  String(Addition);
+        }
+        function calculate_and_displayResultSubtraction()
+        {
+            let FirstNumber = +document.getElementById("FirstNumber").value;
+            let SecondNumber = +document.getElementById("SecondNumber").value;
+            let Subtraction =  FirstNumber - SecondNumber;
+            document.getElementById("changeMessage").innerHTML = "Result subtraction: " + String(Subtraction);
+        }
+        function calculate_and_displayMultiplication()
+        {
+            let FirstNumber = +document.getElementById("FirstNumber").value;
+            let SecondNumber = +document.getElementById("SecondNumber").value;
+            let Multiplication = FirstNumber*SecondNumber;
+            document.getElementById("changeMessage").innerHTML =  "Result Multiplication: "  + String(Multiplication);
+        }
+        function calculate_and_displayResultDivision()
+        {
+            let FirstNumber = +document.getElementById("FirstNumber").value;
+            let SecondNumber = +document.getElementById("SecondNumber").value;
+            let Division = FirstNumber / SecondNumber;
+            document.getElementById("changeMessage").innerHTML = "Result Division: "+String(Division);
+        }
+    </script>
+</body>
+</html>

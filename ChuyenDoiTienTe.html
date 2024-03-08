@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="Amount"></td>
+        <td>
+            <select id="selectCurrencyColume1">
+                <option> USD</option>
+                <option>VND</option>
+            </select>
+        </td>
+        <td>
+            <select id="selectCurrencyColume2">
+                <option > VND</option>
+                <option >USD</option>
+            </select>
+        </td>
+        <td>
+            <button type = "button" onclick="convertCurrency()">  Ấn để tính </button>
+        </td>
+    </tr>
+    <tr>
+        <td id="Result"></td>
+    </tr>
+</table>
+<script>
+    let Currency
+    function convertCurrency() {
+        let CurrencyTypeColume1 = document.getElementById("selectCurrencyColume1").value;
+        let CurrencyTypeColume2 = document.getElementById("selectCurrencyColume2").value;
+        if (CurrencyTypeColume1 === "VND" && CurrencyTypeColume2 === "VND") {
+            let ExchangeRate = 1;
+            let Amount = document.getElementById("Amount").value;
+            let ExchangeValue = Number(Amount) * ExchangeRate;
+            document.getElementById("Result").innerHTML = String(ExchangeValue);
+        }
+        if (CurrencyTypeColume1 === "VND" && CurrencyTypeColume2 === "USD") {
+            let ExchangeRate =1/ 23000;
+            let Amount = document.getElementById("Amount").value;
+            let ExchangeValue = Number(Amount) * ExchangeRate;
+            document.getElementById("Result").innerHTML = String(ExchangeValue);
+        }
+        if (CurrencyTypeColume1 === "USD" && CurrencyTypeColume2 === "VND") {
+            let ExchangeRate = 23000;
+            let Amount = document.getElementById("Amount").value;
+            let ExchangeValue = Number(Amount) * ExchangeRate;
+            document.getElementById("Result").innerHTML = String(ExchangeValue);
+        }
+        if (CurrencyTypeColume1 === "USD" && CurrencyTypeColume2 === "USD") {
+            let ExchangeRate = 1;
+            let Amount = document.getElementById("Amount").value;
+            let ExchangeValue = Number(Amount) * ExchangeRate;
+            document.getElementById("Result").innerHTML = String(ExchangeValue);
+        }
+    }
+</script>
+</body>
+</html>

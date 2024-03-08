@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table bgcolor="green" align="center" style = "border: 5px solid cyan">
+
+    <tr>
+        <td colspan="6">
+            <input type="text" id="displayOnScreen">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="(" onclick="storeValue(event)">
+        </td>
+        <td>
+            <input type="button" value=")" onclick="storeValue(event)">
+        <td>
+            <input type="button" value="%" onclick="storeValue(event)">
+        </td>
+        <td>
+            <input type="button" value="AC" onclick="clearCalculatorScreen ()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="7" onclick="storeValue(event)">
+        </td>
+        <td>
+            <input type="button" value="8" onclick="storeValue(event)">
+        </td>
+        <td>
+            <input type="button" value="9" onclick="storeValue(event)">
+        </td>
+        <td>
+            <input type="button" value="/" onclick="storeValue(event)">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="4" onclick="storeValue(event)">
+        </td>
+        <td>
+            <input type="button" value="5" onclick="storeValue(event)">
+        </td>
+        <td>
+            <input type="button" value="6" onclick="storeValue(event)">
+        </td>
+        <td>
+            <input type="button" value="*" onclick="storeValue(event)">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="1" onclick="storeValue(event)">
+        </td>
+        <td>
+            <input type="button" value="2" onclick="storeValue(event)">
+        </td>
+        <td>
+            <input type="button" value="3" onclick="storeValue(event)">
+        </td>
+        <td>
+            <input type="button" value="-" onclick="storeValue(event)">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="0" onclick="storeValue(event)">
+        </td>
+        <td>
+            <input type="button" value="." onclick="storeValue(event)">
+        </td>
+        <td>
+            <input type="button" value="=" onclick="calculateValue_And_displayResult()">
+        </td>
+        <td>
+            <input type="button" value="+" onclick="storeValue(event)">
+        </td>
+    </tr>
+</table>
+<script>
+    let storeDummyString = " ";
+    function storeValue(event) {
+        storeDummyString += event.target.value;
+        document.getElementById("displayOnScreen").value = storeDummyString; // gán lại value
+    }
+    function calculateValue_And_displayResult() {
+        let CalculatorValue = eval(storeDummyString)
+        document.getElementById("displayOnScreen").value = String(CalculatorValue);
+    }
+    function clearCalculatorScreen() {
+        storeDummyString = " ";
+        document.getElementById("displayOnScreen").value = String(storeDummyString);
+    }
+</script>
+</body>
+</html>

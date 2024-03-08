@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap5</title>
+</head>
+<body>
+<input type="text" id = 'getWidth'> Nhập chiều rộng của hình chữ nhật
+<br> <br>
+<input type="text" id = 'getHeight'> Nhập chiều dài của hình chữ nhật
+<br><br>
+<button type = "button" onclick="calculateAreaAndPerimeterOfRectangle()"> Ấn đề tính </button>
+
+<script>
+    // The longer side of a rectangle is known as the length
+    //  and the shorter side is called its width.
+    function calculateAreaAndPerimeterOfRectangle()
+    {
+        let width = document.getElementById("getWidth").value;
+        let height = document.getElementById("getHeight").value;
+        let AreaOfRectangle = width * height;
+        let PerimeterOfRectangle= width*2 + height*2;
+        document.write("Diện tích của hình chữ nhật : " + AreaOfRectangle  );
+        document.write("<br>")
+        document.write("Chu vi hình chữ nhât: " + PerimeterOfRectangle);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<h4> ứng dụng chuyển đổi nhiệt độ từ oC -> oF</h4>
+<input type="text" id = "getTemperature">Nhập oC
+<button type = "button" onclick = "convertTemperature()">Nhân để chuyển đổi </button>
+<h3 id="putsResult"> </h3>
+</body>
+<script>
+    function convertTemperature()
+    {
+        let CelciusTemperature = document.getElementById("getTemperature").value;
+        let FahrenheitTemperature = 9/5* CelciusTemperature +32;
+        document.getElementById('putsResult').innerHTML = String(FahrenheitTemperature);
+    }
+</script>
+</html>
